@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="main.css">
+    <title>Countdown timer</title>
+</head>
+
+<body>
+    <div class="hero">
+        <h1 id="title"><a href="front.html" id="titles">Code Craft</a></h1>
+    </div>
+
+    <div class="main-content">
+        <div class="paragraph_heading">
+            <div>
+                <h1 class="main-content-heading">Countdown in Web Browser</h1>
+                <div class="subhead">
+                    by manish | 3 min
+                </div>
+            </div>
+            <div>
+                <h4 id="date">25 Jun 2024</h4>
+            </div>
+        </div>
+
+        <div class="paragraphs">
+            <p>I wanted to make countdown timer and later settled for the following idea. The timer starts from 9
+                seconds all the way till 0 seconds. And when the timer starts one of the button glows up till the timer
+                ends. When the timer ends another button glows up at random. Also One more thing I thought to add was
+                some kind of rectangle that shrinks in size wrt to the timer. I saw this one on the internet and wanted
+                to do it. So the main things to do here are as follows:
+            <ul id="list">
+                <li>Make the timer and buttons</li>
+                <li>Light up the buttons accordingly</li>
+                <li>Make the rectangle shrink</li>
+            </ul>
+            </p>
+            <p>I used HTML and CSS to make the timer like "00:0" and the corresponding number between 0 and 9. Made 3
+                buttons namely STOP, SLOW and FAST and gave them red, green and blue colors respectively. The countdown
+                was made using setTimeout() in JS (saw that in internet) Made it in a way using if and else, to set it
+                in a loop forever.
+
+
+            </p>
+            <img src="images/countdown.png" class="body-images">
+            <br></br>
+            <h2>Issues and Working</h2>
+            <p>Then next things was to use JavaScript to make them glow accordingly. At this point I came across the
+                thing that when I used loops, here came a thing specific to JavaScript, "async" and "await" and I still
+                didn't know about it. Things started going haywire when using the same logic I used, which would work
+                perfectly fine in Python, but it did not. I browsed the internet but then I realized I have to learn it.
+                In the meanwhile while looking at the code, I thought to keep the whole logic inside if else conditions,
+                which seems to turn out pretty fine in the end. If you look at the code below, the if statement is for
+                the basic timer condition while the else if is to set the glow up for the button and the last else block
+                is to reset the button back when the timer hits 0. This was one thing I figured out. But the last
+                rectangle shrink goes to the internet.
+
+            </p>
+            <p>The logic goes something like this. The countdown is set to 9 in the beginning, by the else if block and
+                choosing a random block which are inside a list as given in code. 9 renders on the screen and decreases
+                the countdown by 1. Till the countdown goes to 0 the first if block is done. When the countdown goes to
+                -1 the else block is used to reset timer and restore back color to the button.
+            </p>
+            <img src="images/countdown_js.png" class="body-images">
+            <br></br>
+            <h2>Shrinking Bar</h2>
+            <p>The final part of this is making the rectangle and I used the internet to find it out. As shown above the
+                barWidth is given by time remaining by total time multiplied with 100, which is just great. I wish I
+                could've figured it out but no. I will try better next time. But that was smart time and width relation.
+                To smooth out, I used CSS transition property for both width and color of button (also to the internet)
+            </p>
+
+            <br></br>
+            <p>With that all the stuff is completed. I have made small tweaks with the time but other that that
+                everything is working fine. I am very sure that the code can be improved vastly, even though it works
+                right now. I tried my best to affect the DOM only when required. If you feel that anything is missing
+                then feel free to tell me about it through mail. All other improvements and suggestions are welcomed.
+            </p>
+            <br></br>
+        </div>
+
+        <div class="change-pages">
+            <a class="button-like" href="post1-pong.html">Previous</a>
+            <a class="button-like">Next</a>
+        </div>
+
+    </div>
+
+    <div class="footnote">
+        <div class="about">
+            <h2>About Manish</h2>
+            <p>I am a student studying in IIITDM Kurnool.
+                I always had a wish to make my website and this is to
+                show myself that I am getting better.
+                Also I will be sharing my code and my projects here.
+            </p>
+        </div>
+
+        <div class="about">
+            <h2>Connect with Me!</h2>
+            <p>Hey!, I am just starting this, so currently you can
+                connect to me with email.</p>
+            <p>Still working with comments so
+                feel free to give your opinions on anything.</p>
+        </div>
+    </div>
+</body>
+
+</html>
